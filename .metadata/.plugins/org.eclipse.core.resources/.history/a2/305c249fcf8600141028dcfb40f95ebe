@@ -1,0 +1,31 @@
+package backend;
+
+import menuUI.GUI;
+
+public class QuestionNotFoundException extends Exception{
+
+	private static final long serialVersionUID = 1L;
+
+	QuestionType qt;
+	
+	String message;
+	public QuestionNotFoundException(QuestionType qt, Throwable cause){
+		super(thing(qt), cause);
+		this.qt = qt;
+		message = thing(qt);
+		
+	}
+	
+	public static String thing(QuestionType qt){
+		return qt.toString() + " not found in folder " + GUI.prop.getProperty("app.Question");
+	}
+	 @Override
+	 public String toString() {
+	        return message;
+	    }
+	 
+    @Override
+    public String getMessage() {
+        return message;
+    }
+}

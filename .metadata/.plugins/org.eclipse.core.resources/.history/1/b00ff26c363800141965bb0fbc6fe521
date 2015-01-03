@@ -1,0 +1,14 @@
+package easyio;
+//Bradley Henry
+import java.util.Scanner;
+public class fahrenheitToCelcius {
+
+	public static void main(String[] args) {
+	Scanner rd = new Scanner(System.in);
+	double F;
+	
+	System.out.println("this program will convert fahrenheit to celsius")
+
+	}
+
+}

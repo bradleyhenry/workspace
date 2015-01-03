@@ -1,0 +1,310 @@
+package Game;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.util.Random;
+
+import javax.swing.*;
+
+public class GUI implements MouseListener,KeyListener {
+ 
+	GUI gui;
+	JFrame battleW = new JFrame();
+	JFrame window = new JFrame("Maze Game");
+	JPanel mainPanel = new JPanel(new BorderLayout());
+	JPanel scorePanel = new JPanel(new GridLayout(1,0));
+	
+	JPanel mapPanel = new JPanel(new GridLayout(15,15,5,5));
+	JPanel buttonPanel = new JPanel();
+	
+	JPanel[][] grid = new JPanel[15][15];
+	
+	
+	
+	
+	
+	//////battle
+	JFrame battle = new JFrame("Battle");
+	JPanel battleMainPanel = new JPanel(new GridLayout(3,3,1,1));
+	JButton fight = new JButton("Fight");
+	JButton run = new JButton("Run");
+	//create color 
+	Color mapColor = new Color(75,25,22);
+	
+	//create hero
+	JLabel hero = new JLabel(new ImageIcon("src//image//hero.png"));
+	int marioX = 0;
+	int marioY = 0;
+	//
+	JLabel[] villian = new JLabel[15];
+	String[][] contents = new String[15][15];
+	
+	//items
+	JLabel[] items = new JLabel[10];
+	
+	//holding items
+	String[] itemsHeldContent = {null,null,null};
+	JLabel[] itemsHeld = new JLabel[3];
+	int itemsHeldNum = 0;
+	
+	public GUI() {
+		//nest for loop
+		for(int i = 0; i<=14;i++){
+			for(int j = 0; j<=14;j++){
+				grid[i][j] = new JPanel();
+				grid[i][j].setBackground(mapColor);
+				mapPanel.add(grid[i][j]);
+				grid[i][j].addMouseListener(this);
+				grid[i][j].addKeyListener(this);
+				contents[i][j] = "empty";
+			}
+		}
+		mainPanel.add(BorderLayout.CENTER, mapPanel);
+		mainPanel.add(BorderLayout.EAST, buttonPanel);
+		mainPanel.add(BorderLayout.NORTH, scorePanel);
+		
+		window.addKeyListener(this);
+		window.add(mainPanel);
+		window.setExtendedState(JFrame.MAXIMIZED_BOTH);
+		window.setVisible(true);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		grid[0][0].add(hero);
+		contents[0][0] = "hero";
+		
+		
+		Random gen = new Random();
+		// add the evil bills
+		for(int i = 0; i<villian.length; i++){
+			villian[i] = new JLabel(new ImageIcon("src//image//villian.png"));
+			int villianX = gen.nextInt(10)+1;
+			int villianY = gen.nextInt(10)+1;	
+			if(contents[villianX][villianY].equals("empty")){
+				grid[villianX][villianY].add(villian[i]);
+					contents[villianX][villianY] = "villian";
+			}
+					
+		}
+		items();
+	}
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+			for(int i = 0; i<=14; i++){
+				for(int j = 0; j<=14; j++){
+					if(e.getSource() == grid[i][j])
+						grid[i][j].setBackground(Color.GREEN);
+				}
+			}
+			for(int i = 0; i<=2; i++){
+				if(e.getSource() == itemsHeld[i]){
+					int drop = JOptionPane.showConfirmDialog(scorePanel, "Drop?");
+					System.out.println(drop);
+					if(drop == 0){
+						String item = itemsHeld[i].getIcon().toString();
+						System.out.println(item);
+						item = item.substring(12,13);
+						System.out.println(item);
+						scorePanel.remove(itemsHeld[i]);
+						itemsHeldNum--;
+						mainPanel.updateUI();
+					}
+					
+				}
+			}
+		
+		
+		
+		
+		
+		
+	}
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		for(int i = 0; i<=14; i++){
+			for(int j = 0; j<=14; j++){
+				if(e.getSource() == grid[i][j])
+					grid[i][j].setBorder(BorderFactory.createLineBorder(Color.blue,5));
+			}
+		}
+	}
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		for(int i = 0; i<=14; i++){
+			for(int j = 0; j<=14; j++){
+				if(e.getSource() == grid[i][j])
+					grid[i][j].setBorder(BorderFactory.createLineBorder(null,5));
+			}
+		}
+	}
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		if (e.getKeyCode() == KeyEvent.VK_RIGHT){
+			// call move right
+			moveRight();
+			
+		}
+
+		if (e.getKeyCode() == KeyEvent.VK_LEFT){
+			// call move left 
+			moveLeft();
+		}
+
+		if (e.getKeyCode() == KeyEvent.VK_DOWN){
+			// v=call move down
+			moveDown();
+		}
+
+		if (e.getKeyCode() == KeyEvent.VK_UP){
+			// call move up
+			moveUp();
+		}
+	}
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void moveLeft(){
+		//check to see if allowed movement
+		if(marioY > 0){
+			if(!checkEnemy(marioX,marioY-1)){
+			marioY--;
+			itemCheck(marioX,marioY);
+			grid[marioX][marioY].add(hero);
+			mapPanel.updateUI();
+			}
+		}
+		
+	}
+	public void moveRight(){
+		//check to see if allowed movement
+		if(marioY < 14){
+			if(!checkEnemy(marioX,marioY+1)){
+			marioY++;
+			itemCheck(marioX,marioY);
+			grid[marioX][marioY].add(hero);
+			mapPanel.updateUI();
+			}
+				
+		}
+		
+	}
+	public void moveUp(){
+		//check to see if allowed movement
+		if(marioX >  0){
+			if(!checkEnemy(marioX-1,marioY)){
+			marioX--;
+			itemCheck(marioX,marioY);
+			grid[marioX][marioY].add(hero);
+			mapPanel.updateUI();
+			}
+		}
+		
+	}
+	public void moveDown(){
+		//check to see if allowed movement
+		if(marioX < 14){
+			if(!checkEnemy(marioX+1,marioY)){
+			marioX++;
+			itemCheck(marioX,marioY);
+			grid[marioX][marioY].add(hero);
+			mapPanel.updateUI();
+			}
+		}
+	}
+	//helper method
+	//method inside method
+	//peramitors () - bring in data from elsewhere
+	public boolean checkEnemy(int x, int y){
+		if (contents[x][y].equals("villian")){
+			/*JOptionPane.showMessageDialog(hero, "you fail!");
+			mainPanel.removeAll();
+			mainPanel.setBackground(Color.RED);*/
+			battle();
+			
+			return true;
+		}else
+			return false;
+	}
+	public void items(){
+		Random ran = new Random();
+		for (int i = 0; i<items.length;i++){
+			int itemNum = ran.nextInt(6)+1;
+			items[i] = new JLabel(new ImageIcon("src//image//"+ itemNum +".png"));
+			int itemX = ran.nextInt(10)+1;
+			int itemY = ran.nextInt(10)+1;
+			if(contents[itemX][itemY].equals("empty")){
+			grid[itemX][itemY].add(items[i]);
+			contents[itemX][itemY] = Integer.toString(itemNum);
+			}else
+				i--;
+		}
+	}
+	String itemName = "";
+	public void itemCheck(int x, int y){
+		for(int i = 0; i< items.length; i++){
+			if(i==1){
+				itemName = "Random Box";
+			}else if (i==2){
+				itemName = "Yellow Mushroom";
+			}else if (i==3){
+				itemName = "Orange Mushroom";
+			}else if (i==4){
+				itemName = "Red Mushroom";
+			}else if (i==5){
+				itemName = "Green Mushroom";
+			}else if (i==6){
+				itemName = "Flower";
+			}
+			if(contents[x][y].equals(Integer.toString(i))){
+				if(itemsHeldNum <= 2){
+					JOptionPane.showMessageDialog(hero, "you've found a "+itemName);
+					itemsHeld[itemsHeldNum] = new JLabel(new ImageIcon("src//image//"+ i +".png"));
+					itemsHeldContent[itemsHeldNum] = itemName;
+					scorePanel.add(itemsHeld[itemsHeldNum]);
+					itemsHeld[itemsHeldNum].addMouseListener(this);
+					itemsHeldNum++;		
+					grid[x][y].removeAll();
+					contents[x][y] = "empty";
+					}else if(itemsHeldNum > 2)
+							JOptionPane.showMessageDialog(hero,"You can only hold 3 items");
+							
+					}
+				
+		}
+	}
+	public void battle(){
+			battleMainPanel.add(fight);
+			battleMainPanel.add(run);
+			battle.add(mainPanel);
+			battle.setVisible(true);
+		
+	}
+}
+
+

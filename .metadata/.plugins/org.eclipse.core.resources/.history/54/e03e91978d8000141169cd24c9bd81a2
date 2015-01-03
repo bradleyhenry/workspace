@@ -1,0 +1,24 @@
+package Game;
+
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class battle {
+
+	static JFrame battle = new JFrame("Battle");
+	JPanel mainPanel = new JPanel(new GridLayout(3,3,1,1));
+	JButton fight = new JButton("Fight");
+	JButton run = new JButton("Run");
+	public battle() {
+		mainPanel.add(fight);
+		mainPanel.add(run);
+		battle.add(mainPanel);
+		battle.setVisible(true);
+	}
+	public static JFrame getBattle() {
+		return battle;
+	}
+}

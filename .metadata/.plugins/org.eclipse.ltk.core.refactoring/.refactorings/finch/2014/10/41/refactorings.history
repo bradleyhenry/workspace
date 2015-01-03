@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;finch.Finch.java&apos; to &apos;FinchRun.java&apos;&#x0D;&#x0A;- Original project: &apos;finch&apos;&#x0D;&#x0A;- Original element: &apos;finch.Finch.java&apos;&#x0D;&#x0A;- Renamed element: &apos;finch.FinchRun.java&apos;" description="Rename compilation unit &apos;Finch.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;finch{Finch.java" name="FinchRun.java" references="false" stamp="1412951261712" version="1.0"/>
+</session>

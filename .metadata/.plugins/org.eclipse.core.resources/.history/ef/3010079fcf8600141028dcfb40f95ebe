@@ -1,0 +1,278 @@
+package backend;
+import java.util.*;
+public class QuestionManager {
+
+	
+	private ArrayList<Question> questions;
+	
+	private ArrayList<Question> english;
+	private ArrayList<Question> math;
+	private ArrayList<Question> science;
+	private ArrayList<Question> socialStudies;
+	private ArrayList<Question> technology;
+	private ArrayList<Question> forignLanguage;
+	private ArrayList<Question> random;
+	
+	private Stack<Question> englishStack;
+	private Stack<Question> mathStack;
+	private Stack<Question> scienceStack;
+	private Stack<Question> socialStudiesStack;
+	private Stack<Question> technologyStack;
+	private Stack<Question> forignLanguageStack;
+	private Stack<Question> randomStack;
+	
+	private boolean englishThere = true;
+	private boolean mathThere = true;
+	private boolean scienceThere = true;
+	private boolean socialStudiesThere = true;
+	private boolean technologyThere = true;
+	private boolean forignLanguageThere = true;
+	private boolean randomThere = true;
+	
+	public QuestionManager(){
+		// TODO: need to handle try / catch (and log) if file problem (xml) reading question
+		questions = XMLcontrol.getAllQuestionFilesFromFolder();
+		create();
+		sort();
+		assignToStack();
+	}
+	
+	private void sort(){
+		for(Question q: questions){
+			switch(q.getQuestionType()){
+			case English:
+				english.add(q);
+				break;
+			case Math:
+				math.add(q);
+				break;
+			case Science:
+				science.add(q);
+				break;
+			case SocialStudies:
+				socialStudies.add(q);
+				break;
+			case Technology:
+				technology.add(q);
+				break;
+			case ForignLanguage:
+				forignLanguage.add(q);
+				break;
+			case Random:
+				random.add(q);
+				break;
+			default:
+				break;
+				
+			}
+		}
+
+
+	}
+	
+	private void create(){
+		english = new ArrayList<Question>();
+		math = new ArrayList<Question>();
+		science = new ArrayList<Question>();
+		socialStudies = new ArrayList<Question>();
+		technology = new ArrayList<Question>();
+		forignLanguage = new ArrayList<Question>();
+		random = new ArrayList<Question>();
+		
+		englishStack = new Stack<Question>();
+		mathStack = new Stack<Question>();
+		scienceStack = new Stack<Question>();
+		socialStudiesStack = new Stack<Question>();
+		technologyStack = new Stack<Question>();
+		forignLanguageStack = new Stack<Question>();
+		randomStack = new Stack<Question>();
+	}
+	
+	private void assignToStack(){
+		assignEnglishToStack();
+		assignScienceToStack();
+		assignSocialStudiesToStack();
+		assignTechnologyToStack();
+		assignForignLanguageToStack();
+		assignRandomToStack();
+	}
+	public void assignEnglishToStack(){
+		if(english.size() != 0){
+			Collections.shuffle(english);
+			for(Question q : english){
+				englishStack.push(q);
+			}
+		}else{
+			englishThere = false;
+		}
+	}
+	public void assignScienceToStack(){
+		if(science.size() != 0){
+			Collections.shuffle(science);
+			for(Question q : science){
+				scienceStack.push(q);
+			}
+		}else{
+			scienceThere = false;
+		}
+	}
+	public void assignSocialStudiesToStack(){
+		if(socialStudies.size() != 0){
+			Collections.shuffle(socialStudies);
+			for(Question q : socialStudies){
+				socialStudiesStack.push(q);
+			}
+		}else{
+			socialStudiesThere = false;
+		}
+	}
+	public void assignTechnologyToStack(){
+		if(technology.size() != 0){
+			Collections.shuffle(technology);
+			for(Question q : technology){
+				technologyStack.push(q);
+			}
+		}else{
+			technologyThere = false;
+		}
+		
+	}
+	public void assignForignLanguageToStack(){
+		if(forignLanguage.size() != 0){
+			Collections.shuffle(forignLanguage);
+			for(Question q : forignLanguage){
+				forignLanguageStack.push(q);
+			}
+		}else{
+			forignLanguageThere = false;
+		}
+	}
+	public void assignRandomToStack(){
+		if(random.size() != 0){
+			Collections.shuffle(random);
+			for(Question q : random){
+				randomStack.push(q);
+			}
+		}else{
+			randomThere = false;
+		}
+	}
+	
+	public void assignMathToStack(){
+		if(math.size() != 0){
+			Collections.shuffle(math);
+			for(Question q : math){
+				mathStack.push(q);
+			}
+		}else{
+			mathThere = false;
+		}
+	}
+	// TODO: if I ask for english, and there is no english, then return null, don't return another category
+	public Question getNext(QuestionType q){
+		switch(q){
+		case English:
+			if(englishThere){
+				if(!englishStack.isEmpty()){
+					return englishStack.pop();
+				}else{
+					assignEnglishToStack();
+					return englishStack.pop();
+				}
+			}else{
+				throw new QuestionNotFoundException(QuestionType.English);
+				return null;
+			}
+			
+			
+		case Math:
+			if(mathThere){
+				if(!mathStack.isEmpty()){
+					return mathStack.pop();
+				}else{
+					assignMathToStack();
+					return mathStack.pop();
+				}
+			}else{
+				return null;
+			}
+			
+			
+		case Science:
+			if(scienceThere){
+				if(!scienceStack.isEmpty()){
+					return scienceStack.pop();
+				}else{
+					assignScienceToStack();
+					return scienceStack.pop();
+				}
+			}else{
+				return null;
+			}
+		case SocialStudies:
+			if(socialStudiesThere){
+				if(!socialStudiesStack.isEmpty()){
+					return socialStudiesStack.pop();
+				}else{
+					assignSocialStudiesToStack();
+					return socialStudiesStack.pop();
+				}
+			}else{
+				return null;
+			}
+			
+			
+		case Technology:
+			if(technologyThere){
+				if(!technologyStack.isEmpty()){
+					return technologyStack.pop();
+				}else{
+					assignTechnologyToStack();
+					return technologyStack.pop();
+				}
+			}else{
+				return null;
+			}
+			
+			
+		case ForignLanguage:
+			if(forignLanguageThere){
+				if(!forignLanguageStack.isEmpty()){
+					return forignLanguageStack.pop();
+				}else{
+					assignForignLanguageToStack();
+					return forignLanguageStack.pop();
+				}
+			}else{
+				return null;
+			}
+			
+			
+		case Random:
+			if(randomThere){
+				if(!randomStack.isEmpty()){
+					return randomStack.pop();
+				}else{
+					assignRandomToStack();
+					return randomStack.pop();
+				}
+			}else{
+				return null;
+			}
+			
+		default:
+			return null;
+		
+		}
+	}
+
+	
+	public ArrayList<Question> getQuestions() {
+		return questions;
+	}
+	
+
+	public void setQuestions(ArrayList<Question> questions) {
+		this.questions = questions;
+	}
+}

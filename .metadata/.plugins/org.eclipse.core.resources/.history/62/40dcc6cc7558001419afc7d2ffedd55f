@@ -1,0 +1,24 @@
+package calculationsPractice;
+//Bradley Henry
+import java.util.Scanner;
+public class Calc {
+
+	public static void main(String[] args) {
+		Scanner rd = new Scanner(System.in);
+		System.out.println("numbers go here");
+		double num1,num2,sum,diff,pro,quo,avg,min,max;
+		num1 = rd.nextDouble();
+		num2 = rd.nextDouble();
+		sum = num1 + num2;
+		diff = num1 - num2;
+		pro = num1 * num2;
+		quo = num1 / num2;
+		avg = (num1 + num2) / 2;
+		min = Math.min(num1, num2);
+		max = Math.max(num1, num2);
+		System.out.println("Sum "+sum+"\nDifference "+diff+"\nProduct "+pro+"\nQuotient "+quo+"\nAverage "+avg+"\nMinimum "+min+"\nMaximum "+max);
+		
+		
+	}
+
+}

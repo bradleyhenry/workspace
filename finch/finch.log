@@ -1,0 +1,919 @@
+2014-10-10 10:28:22,618 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication()
+2014-10-10 10:28:22,622 [main] INFO : edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): System property [terk-application.connection-strategy.class.name] is not defined.  Attempting to use default [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy] implementation class instead.
+2014-10-10 10:28:22,675 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): successfully instantiated ConnectionStrategy implementation class [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy]
+2014-10-10 10:28:23,054 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager: scanAndConnectWorkhorseRunnable.run()
+2014-10-10 10:28:23,054 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager.disconnect()
+2014-10-10 10:28:23,055 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Disconnected]  port []
+2014-10-10 10:28:23,057 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-10-10 10:28:23,057 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Scanning]  port []
+2014-10-10 10:28:23,074 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-10-10 10:28:23,099 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-10-10 10:28:24,029 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 10:28:24,030 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 10:28:24,032 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-10-10 10:28:24,032 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-10-10 10:28:24,099 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 10:28:24,099 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 10:28:24,163 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 10:28:24,167 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): connection successful
+2014-10-10 10:28:24,215 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection established!
+2014-10-10 10:28:24,216 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Connected]  port [\\?\hid#vid_2354&pid_1111#6&391fe76d&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+2014-10-10 10:28:24,242 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::motor::OpenLoopVelocityControllableMotorService] service
+2014-10-10 10:28:24,243 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::motor::OpenLoopVelocityControllableMotorService)
+2014-10-10 10:28:24,253 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,2)
+2014-10-10 10:28:24,253 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::min-velocity,-255)
+2014-10-10 10:28:24,253 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::max-velocity,255)
+2014-10-10 10:29:00,497 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication()
+2014-10-10 10:29:00,499 [main] INFO : edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): System property [terk-application.connection-strategy.class.name] is not defined.  Attempting to use default [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy] implementation class instead.
+2014-10-10 10:29:00,534 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): successfully instantiated ConnectionStrategy implementation class [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy]
+2014-10-10 10:29:00,843 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager: scanAndConnectWorkhorseRunnable.run()
+2014-10-10 10:29:00,844 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager.disconnect()
+2014-10-10 10:29:00,844 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Disconnected]  port []
+2014-10-10 10:29:00,846 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-10-10 10:29:00,846 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Scanning]  port []
+2014-10-10 10:29:00,863 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-10-10 10:29:00,884 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-10-10 10:29:01,736 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 10:29:01,764 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 10:29:01,766 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-10-10 10:29:01,766 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-10-10 10:29:01,832 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 10:29:01,832 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 10:29:01,895 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 10:29:01,899 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): connection successful
+2014-10-10 10:29:38,104 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication()
+2014-10-10 10:29:38,107 [main] INFO : edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): System property [terk-application.connection-strategy.class.name] is not defined.  Attempting to use default [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy] implementation class instead.
+2014-10-10 10:29:38,141 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): successfully instantiated ConnectionStrategy implementation class [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy]
+2014-10-10 10:29:38,454 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager: scanAndConnectWorkhorseRunnable.run()
+2014-10-10 10:29:38,454 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager.disconnect()
+2014-10-10 10:29:38,455 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Disconnected]  port []
+2014-10-10 10:29:38,457 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-10-10 10:29:38,457 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Scanning]  port []
+2014-10-10 10:29:38,473 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-10-10 10:29:38,495 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-10-10 10:29:39,696 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 10:29:39,697 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 10:29:39,699 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-10-10 10:29:39,699 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-10-10 10:29:39,764 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 10:29:39,764 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 10:29:39,827 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 10:29:39,831 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): connection successful
+2014-10-10 10:31:07,645 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication()
+2014-10-10 10:31:07,647 [main] INFO : edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): System property [terk-application.connection-strategy.class.name] is not defined.  Attempting to use default [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy] implementation class instead.
+2014-10-10 10:31:07,682 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): successfully instantiated ConnectionStrategy implementation class [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy]
+2014-10-10 10:31:07,979 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager: scanAndConnectWorkhorseRunnable.run()
+2014-10-10 10:31:07,979 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager.disconnect()
+2014-10-10 10:31:07,979 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Disconnected]  port []
+2014-10-10 10:31:07,981 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-10-10 10:31:07,981 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Scanning]  port []
+2014-10-10 10:31:07,994 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-10-10 10:31:08,012 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-10-10 10:31:08,867 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 10:31:08,867 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 10:31:08,869 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-10-10 10:31:08,870 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-10-10 10:31:08,934 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 10:31:08,935 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 10:31:08,999 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 10:31:09,002 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): connection successful
+2014-10-10 10:35:57,794 [HIDCommandExecutionQueue.executor pool-5-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.read(): Read failed.  Return was [false] and last error was [WinError{id=1167, name='Device Not Connected: the device is not connected'}]
+2014-10-10 10:35:57,795 [HIDCommandExecutionQueue.executor pool-5-thread-1] INFO : edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.read(): Throwing an HIDDeviceNotConnectedException since the read error was [WinError{id=1167, name='Device Not Connected: the device is not connected'}]
+2014-10-10 10:35:57,797 [HIDCommandExecutionQueue.executor pool-5-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.write(): Write failed.  Return was [false] and last error was [WinError{id=1167, name='Device Not Connected: the device is not connected'}]
+2014-10-10 10:35:57,797 [HIDCommandExecutionQueue.executor pool-5-thread-1] INFO : edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.write(): Throwing an HIDDeviceNotConnectedException since the write error was [WinError{id=1167, name='Device Not Connected: the device is not connected'}]
+2014-10-10 10:35:57,801 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue: HIDCommandExecutionQueue.execute():ExecutionException while trying to get the HIDCommandResponse [edu.cmu.ri.createlab.usb.hid.HIDDeviceNotConnectedException: Read failed because the device is not connected (WinError{id=1167, name='Device Not Connected: the device is not connected'})]
+java.util.concurrent.ExecutionException: edu.cmu.ri.createlab.usb.hid.HIDDeviceNotConnectedException: Read failed because the device is not connected (WinError{id=1167, name='Device Not Connected: the device is not connected'})
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue.execute(HIDCommandExecutionQueue.java:61)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue.executeAndReturnStatus(HIDCommandExecutionQueue.java:105)
+	at edu.cmu.ri.createlab.util.commandexecution.NoReturnValueCommandExecutor.execute(NoReturnValueCommandExecutor.java:36)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController.emergencyStop(DefaultFinchController.java:221)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController.create(DefaultFinchController.java:74)
+	at edu.cmu.ri.createlab.device.connectivity.FinchConnectivityManager.scanForDeviceAndCreateProxy(FinchConnectivityManager.java:14)
+	at edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager$DeviceScanner.run(BaseCreateLabDeviceConnectivityManager.java:229)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: edu.cmu.ri.createlab.usb.hid.HIDDeviceNotConnectedException: Read failed because the device is not connected (WinError{id=1167, name='Device Not Connected: the device is not connected'})
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.read(WindowsHIDDevice.java:371)
+	at edu.cmu.ri.createlab.usb.hid.CreateLabHIDCommandStrategy.execute(CreateLabHIDCommandStrategy.java:54)
+	at edu.cmu.ri.createlab.usb.hid.CreateLabHIDCommandStrategy.execute(CreateLabHIDCommandStrategy.java:14)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommand.call(HIDCommand.java:22)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommand.call(HIDCommand.java:9)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	... 3 more
+2014-10-10 10:35:57,801 [FinchController.peerPingScheduler pool-6-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue: HIDCommandExecutionQueue.execute():ExecutionException while trying to get the HIDCommandResponse [edu.cmu.ri.createlab.usb.hid.HIDDeviceNotConnectedException: Write failed because the device is not connected (WinError{id=1167, name='Device Not Connected: the device is not connected'}).  HIDWriteStatus = [HIDWriteStatus{numBytesRequestedToWrite=1, numBytesActuallyWritten=0, wasSuccessful=false, commandId=2}]]
+java.util.concurrent.ExecutionException: edu.cmu.ri.createlab.usb.hid.HIDDeviceNotConnectedException: Write failed because the device is not connected (WinError{id=1167, name='Device Not Connected: the device is not connected'}).  HIDWriteStatus = [HIDWriteStatus{numBytesRequestedToWrite=1, numBytesActuallyWritten=0, wasSuccessful=false, commandId=2}]
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue.execute(HIDCommandExecutionQueue.java:61)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController$FinchPinger.run(DefaultFinchController.java:344)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: edu.cmu.ri.createlab.usb.hid.HIDDeviceNotConnectedException: Write failed because the device is not connected (WinError{id=1167, name='Device Not Connected: the device is not connected'}).  HIDWriteStatus = [HIDWriteStatus{numBytesRequestedToWrite=1, numBytesActuallyWritten=0, wasSuccessful=false, commandId=2}]
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.write(WindowsHIDDevice.java:465)
+	at edu.cmu.ri.createlab.usb.hid.CreateLabHIDCommandStrategy.execute(CreateLabHIDCommandStrategy.java:28)
+	at edu.cmu.ri.createlab.usb.hid.CreateLabHIDCommandStrategy.execute(CreateLabHIDCommandStrategy.java:14)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommand.call(HIDCommand.java:22)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommand.call(HIDCommand.java:9)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	... 3 more
+2014-10-10 10:35:57,866 [FinchController.peerPingScheduler pool-6-thread-1] INFO : edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue: HIDCommandExecutionQueue.execute(): Cause of ExecutionException is HIDDeviceNotConnectedException, so rethrowing HIDDeviceNotConnectedException...
+2014-10-10 10:35:57,864 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] INFO : edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue: HIDCommandExecutionQueue.execute(): Cause of ExecutionException is HIDDeviceNotConnectedException, so rethrowing HIDDeviceNotConnectedException...
+2014-10-10 10:35:57,866 [FinchController.peerPingScheduler pool-6-thread-1] ERROR: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: FinchProxy$FinchPinger.run(): Exception caught while executing the peer pinger
+edu.cmu.ri.createlab.usb.hid.HIDDeviceNotConnectedException: Write failed because the device is not connected (WinError{id=1167, name='Device Not Connected: the device is not connected'}).  HIDWriteStatus = [HIDWriteStatus{numBytesRequestedToWrite=1, numBytesActuallyWritten=0, wasSuccessful=false, commandId=2}]
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.write(WindowsHIDDevice.java:465)
+	at edu.cmu.ri.createlab.usb.hid.CreateLabHIDCommandStrategy.execute(CreateLabHIDCommandStrategy.java:28)
+	at edu.cmu.ri.createlab.usb.hid.CreateLabHIDCommandStrategy.execute(CreateLabHIDCommandStrategy.java:14)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommand.call(HIDCommand.java:22)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommand.call(HIDCommand.java:9)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2014-10-10 10:35:57,866 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.util.commandexecution.NoReturnValueCommandExecutor: Exception caught while trying to execute a command
+edu.cmu.ri.createlab.usb.hid.HIDDeviceNotConnectedException: Read failed because the device is not connected (WinError{id=1167, name='Device Not Connected: the device is not connected'})
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.read(WindowsHIDDevice.java:371)
+	at edu.cmu.ri.createlab.usb.hid.CreateLabHIDCommandStrategy.execute(CreateLabHIDCommandStrategy.java:54)
+	at edu.cmu.ri.createlab.usb.hid.CreateLabHIDCommandStrategy.execute(CreateLabHIDCommandStrategy.java:14)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommand.call(HIDCommand.java:22)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommand.call(HIDCommand.java:9)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2014-10-10 10:35:57,868 [HIDCommandExecutionQueue.executor pool-5-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.write(): Write failed.  Return was [false] and last error was [WinError{id=1167, name='Device Not Connected: the device is not connected'}]
+2014-10-10 10:35:57,869 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: FinchProxy$FinchPinger.run(): Peer ping failed (received a null state).  Attempting to disconnect...
+2014-10-10 10:35:57,869 [HIDCommandExecutionQueue.executor pool-5-thread-1] INFO : edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.write(): Throwing an HIDDeviceNotConnectedException since the write error was [WinError{id=1167, name='Device Not Connected: the device is not connected'}]
+2014-10-10 10:35:57,869 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.disconnect(): Shutting down finch pinger...
+2014-10-10 10:35:57,869 [FinchController.peerPingScheduler pool-6-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue: HIDCommandExecutionQueue.execute():ExecutionException while trying to get the HIDCommandResponse [edu.cmu.ri.createlab.usb.hid.HIDDeviceNotConnectedException: Write failed because the device is not connected (WinError{id=1167, name='Device Not Connected: the device is not connected'}).  HIDWriteStatus = [HIDWriteStatus{numBytesRequestedToWrite=1, numBytesActuallyWritten=0, wasSuccessful=false, commandId=3}]]
+java.util.concurrent.ExecutionException: edu.cmu.ri.createlab.usb.hid.HIDDeviceNotConnectedException: Write failed because the device is not connected (WinError{id=1167, name='Device Not Connected: the device is not connected'}).  HIDWriteStatus = [HIDWriteStatus{numBytesRequestedToWrite=1, numBytesActuallyWritten=0, wasSuccessful=false, commandId=3}]
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue.execute(HIDCommandExecutionQueue.java:61)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController$FinchPinger.run(DefaultFinchController.java:344)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: edu.cmu.ri.createlab.usb.hid.HIDDeviceNotConnectedException: Write failed because the device is not connected (WinError{id=1167, name='Device Not Connected: the device is not connected'}).  HIDWriteStatus = [HIDWriteStatus{numBytesRequestedToWrite=1, numBytesActuallyWritten=0, wasSuccessful=false, commandId=3}]
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.write(WindowsHIDDevice.java:465)
+	at edu.cmu.ri.createlab.usb.hid.CreateLabHIDCommandStrategy.execute(CreateLabHIDCommandStrategy.java:28)
+	at edu.cmu.ri.createlab.usb.hid.CreateLabHIDCommandStrategy.execute(CreateLabHIDCommandStrategy.java:14)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommand.call(HIDCommand.java:22)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommand.call(HIDCommand.java:9)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	... 3 more
+2014-10-10 10:35:57,872 [FinchController.peerPingScheduler pool-6-thread-1] INFO : edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue: HIDCommandExecutionQueue.execute(): Cause of ExecutionException is HIDDeviceNotConnectedException, so rethrowing HIDDeviceNotConnectedException...
+2014-10-10 10:35:57,872 [FinchController.peerPingScheduler pool-6-thread-1] ERROR: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: FinchProxy$FinchPinger.run(): Exception caught while executing the peer pinger
+edu.cmu.ri.createlab.usb.hid.HIDDeviceNotConnectedException: Write failed because the device is not connected (WinError{id=1167, name='Device Not Connected: the device is not connected'}).  HIDWriteStatus = [HIDWriteStatus{numBytesRequestedToWrite=1, numBytesActuallyWritten=0, wasSuccessful=false, commandId=3}]
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.write(WindowsHIDDevice.java:465)
+	at edu.cmu.ri.createlab.usb.hid.CreateLabHIDCommandStrategy.execute(CreateLabHIDCommandStrategy.java:28)
+	at edu.cmu.ri.createlab.usb.hid.CreateLabHIDCommandStrategy.execute(CreateLabHIDCommandStrategy.java:14)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommand.call(HIDCommand.java:22)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommand.call(HIDCommand.java:9)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2014-10-10 10:35:57,870 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.disconnect(): Successfully shut down finch pinger.
+2014-10-10 10:35:57,874 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.disconnect(): Won't try to disconnect from the Finch since willAddDisconnectCommandToQueue was false
+2014-10-10 10:35:57,874 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.disconnect(): Now shutting down the HIDCommandExecutionQueue...
+2014-10-10 10:35:57,874 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue: HIDCommandExecutionQueue.shutdown(): Shutting down the HID device command execution queue
+2014-10-10 10:35:57,874 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue: HIDCommandExecutionQueue.shutdown(): Unexecuted tasks: 0
+2014-10-10 10:35:57,874 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue: HIDCommandExecutionQueue.shutdown(): Waiting for the HID device command execution queue to shutdown.
+2014-10-10 10:35:57,874 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue: HIDCommandExecutionQueue.shutdown(): HID device command execution queue successfully shutdown
+2014-10-10 10:35:57,874 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue: HIDCommandExecutionQueue.shutdown(): Now attempting to disconnect from the HID device...
+2014-10-10 10:35:57,875 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 10:35:57,875 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue: HIDCommandExecutionQueue.shutdown(): HID device disconnected successfully.
+2014-10-10 10:35:57,875 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: FinchProxy$FinchPinger.run(): Done disconnecting from the finch
+2014-10-10 10:35:57,875 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: FinchProxy$FinchPinger.run(): Notifying 0 listeners of ping failure...
+2014-10-10 10:35:57,875 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection established!
+2014-10-10 10:35:57,877 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Connected]  port [\\?\hid#vid_2354&pid_1111#6&391fe76d&0&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+2014-10-10 10:35:57,902 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::motor::OpenLoopVelocityControllableMotorService] service
+2014-10-10 10:35:57,902 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::motor::OpenLoopVelocityControllableMotorService)
+2014-10-10 10:35:57,913 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,2)
+2014-10-10 10:35:57,914 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::min-velocity,-255)
+2014-10-10 10:35:57,914 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::max-velocity,255)
+2014-10-10 10:35:57,917 [main] ERROR: edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue: HIDCommandExecutionQueue.execute():RejectedExecutionException while trying to schedule the command for execution
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@2530c12 rejected from java.util.concurrent.ThreadPoolExecutor@73c6c3b2[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1369)
+	at java.util.concurrent.Executors$DelegatedExecutorService.execute(Executors.java:668)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue.execute(HIDCommandExecutionQueue.java:57)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue.executeAndReturnStatus(HIDCommandExecutionQueue.java:105)
+	at edu.cmu.ri.createlab.util.commandexecution.NoReturnValueCommandExecutor.execute(NoReturnValueCommandExecutor.java:36)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController.setMotorVelocities(DefaultFinchController.java:200)
+	at edu.cmu.ri.createlab.terk.robot.finch.services.OpenLoopVelocityControllableMotorServiceImpl.setVelocities(OpenLoopVelocityControllableMotorServiceImpl.java:46)
+	at edu.cmu.ri.createlab.terk.robot.finch.Finch.setWheelVelocities(Finch.java:324)
+	at finch.FinchRun.main(FinchRun.java:9)
+2014-10-10 10:36:07,918 [main] ERROR: edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue: HIDCommandExecutionQueue.execute():RejectedExecutionException while trying to schedule the command for execution
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@64a294a6 rejected from java.util.concurrent.ThreadPoolExecutor@73c6c3b2[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1369)
+	at java.util.concurrent.Executors$DelegatedExecutorService.execute(Executors.java:668)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue.execute(HIDCommandExecutionQueue.java:57)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue.executeAndReturnStatus(HIDCommandExecutionQueue.java:105)
+	at edu.cmu.ri.createlab.util.commandexecution.NoReturnValueCommandExecutor.execute(NoReturnValueCommandExecutor.java:36)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController.setMotorVelocities(DefaultFinchController.java:200)
+	at edu.cmu.ri.createlab.terk.robot.finch.services.OpenLoopVelocityControllableMotorServiceImpl.setVelocities(OpenLoopVelocityControllableMotorServiceImpl.java:46)
+	at edu.cmu.ri.createlab.terk.robot.finch.Finch.setWheelVelocities(Finch.java:324)
+	at edu.cmu.ri.createlab.terk.robot.finch.Finch.setWheelVelocities(Finch.java:300)
+	at edu.cmu.ri.createlab.terk.robot.finch.Finch.stopWheels(Finch.java:287)
+	at edu.cmu.ri.createlab.terk.robot.finch.Finch.setWheelVelocities(Finch.java:328)
+	at finch.FinchRun.main(FinchRun.java:9)
+2014-10-10 10:36:07,919 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::led::FullColorLEDService] service
+2014-10-10 10:36:07,920 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::led::FullColorLEDService)
+2014-10-10 10:36:07,926 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,1)
+2014-10-10 10:36:07,926 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::led::FullColorLEDService::min-intensity,0)
+2014-10-10 10:36:07,926 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::led::FullColorLEDService::max-intensity,255)
+2014-10-10 10:36:07,928 [main] ERROR: edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue: HIDCommandExecutionQueue.execute():RejectedExecutionException while trying to schedule the command for execution
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@1b9e1916 rejected from java.util.concurrent.ThreadPoolExecutor@73c6c3b2[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 3]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1369)
+	at java.util.concurrent.Executors$DelegatedExecutorService.execute(Executors.java:668)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue.execute(HIDCommandExecutionQueue.java:57)
+	at edu.cmu.ri.createlab.usb.hid.HIDCommandExecutionQueue.executeAndReturnStatus(HIDCommandExecutionQueue.java:105)
+	at edu.cmu.ri.createlab.util.commandexecution.NoReturnValueCommandExecutor.execute(NoReturnValueCommandExecutor.java:36)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController.setFullColorLED(DefaultFinchController.java:195)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController.setFullColorLED(DefaultFinchController.java:330)
+	at edu.cmu.ri.createlab.terk.robot.finch.services.FullColorLEDServiceImpl.set(FullColorLEDServiceImpl.java:51)
+	at edu.cmu.ri.createlab.terk.services.led.BaseFullColorLEDServiceImpl.set(BaseFullColorLEDServiceImpl.java:136)
+	at edu.cmu.ri.createlab.terk.robot.finch.Finch.setLED(Finch.java:130)
+	at finch.FinchRun.main(FinchRun.java:10)
+2014-10-10 11:12:31,449 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication()
+2014-10-10 11:12:31,452 [main] INFO : edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): System property [terk-application.connection-strategy.class.name] is not defined.  Attempting to use default [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy] implementation class instead.
+2014-10-10 11:12:31,487 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): successfully instantiated ConnectionStrategy implementation class [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy]
+2014-10-10 11:12:31,814 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager: scanAndConnectWorkhorseRunnable.run()
+2014-10-10 11:12:31,814 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager.disconnect()
+2014-10-10 11:12:31,814 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Disconnected]  port []
+2014-10-10 11:12:31,817 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-10-10 11:12:31,817 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Scanning]  port []
+2014-10-10 11:12:31,833 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-10-10 11:12:31,855 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-10-10 11:12:32,744 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:32,745 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:32,747 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-10-10 11:12:32,747 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-10-10 11:12:32,813 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:32,813 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:32,817 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): device not found
+2014-10-10 11:12:32,819 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: HIDDeviceNotFoundException while trying to connect to the Finch, returning null
+edu.cmu.ri.createlab.usb.hid.HIDDeviceNotFoundException: Device with vendor ID [2354] and product ID [1111] not found.
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connect(WindowsHIDDevice.java:321)
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connectExclusively(WindowsHIDDevice.java:281)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController.create(DefaultFinchController.java:64)
+	at edu.cmu.ri.createlab.device.connectivity.FinchConnectivityManager.scanForDeviceAndCreateProxy(FinchConnectivityManager.java:14)
+	at edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager$DeviceScanner.run(BaseCreateLabDeviceConnectivityManager.java:229)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2014-10-10 11:12:32,827 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection failed
+2014-10-10 11:12:32,827 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: Failed to connect, but we're still in scan mode, so schedule a new scan
+2014-10-10 11:12:33,828 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-10-10 11:12:33,828 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Scanning]  port []
+2014-10-10 11:12:33,828 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-10-10 11:12:33,828 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-10-10 11:12:33,832 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:33,832 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:33,834 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-10-10 11:12:33,834 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-10-10 11:12:33,836 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:33,836 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:33,837 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): device not found
+2014-10-10 11:12:33,837 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: HIDDeviceNotFoundException while trying to connect to the Finch, returning null
+edu.cmu.ri.createlab.usb.hid.HIDDeviceNotFoundException: Device with vendor ID [2354] and product ID [1111] not found.
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connect(WindowsHIDDevice.java:321)
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connectExclusively(WindowsHIDDevice.java:281)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController.create(DefaultFinchController.java:64)
+	at edu.cmu.ri.createlab.device.connectivity.FinchConnectivityManager.scanForDeviceAndCreateProxy(FinchConnectivityManager.java:14)
+	at edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager$DeviceScanner.run(BaseCreateLabDeviceConnectivityManager.java:229)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2014-10-10 11:12:33,838 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection failed
+2014-10-10 11:12:33,838 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: Failed to connect, but we're still in scan mode, so schedule a new scan
+2014-10-10 11:12:34,840 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-10-10 11:12:34,840 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Scanning]  port []
+2014-10-10 11:12:34,840 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-10-10 11:12:34,840 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-10-10 11:12:34,844 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:34,845 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:34,846 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-10-10 11:12:34,846 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-10-10 11:12:34,848 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:34,848 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:34,849 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): device not found
+2014-10-10 11:12:34,849 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: HIDDeviceNotFoundException while trying to connect to the Finch, returning null
+edu.cmu.ri.createlab.usb.hid.HIDDeviceNotFoundException: Device with vendor ID [2354] and product ID [1111] not found.
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connect(WindowsHIDDevice.java:321)
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connectExclusively(WindowsHIDDevice.java:281)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController.create(DefaultFinchController.java:64)
+	at edu.cmu.ri.createlab.device.connectivity.FinchConnectivityManager.scanForDeviceAndCreateProxy(FinchConnectivityManager.java:14)
+	at edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager$DeviceScanner.run(BaseCreateLabDeviceConnectivityManager.java:229)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2014-10-10 11:12:34,850 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection failed
+2014-10-10 11:12:34,850 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: Failed to connect, but we're still in scan mode, so schedule a new scan
+2014-10-10 11:12:35,851 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-10-10 11:12:35,851 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Scanning]  port []
+2014-10-10 11:12:35,851 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-10-10 11:12:35,851 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-10-10 11:12:35,855 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:35,855 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:35,857 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-10-10 11:12:35,857 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-10-10 11:12:35,859 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:35,859 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:35,860 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): device not found
+2014-10-10 11:12:35,860 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: HIDDeviceNotFoundException while trying to connect to the Finch, returning null
+edu.cmu.ri.createlab.usb.hid.HIDDeviceNotFoundException: Device with vendor ID [2354] and product ID [1111] not found.
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connect(WindowsHIDDevice.java:321)
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connectExclusively(WindowsHIDDevice.java:281)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController.create(DefaultFinchController.java:64)
+	at edu.cmu.ri.createlab.device.connectivity.FinchConnectivityManager.scanForDeviceAndCreateProxy(FinchConnectivityManager.java:14)
+	at edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager$DeviceScanner.run(BaseCreateLabDeviceConnectivityManager.java:229)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2014-10-10 11:12:35,861 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection failed
+2014-10-10 11:12:35,861 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: Failed to connect, but we're still in scan mode, so schedule a new scan
+2014-10-10 11:12:36,862 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-10-10 11:12:36,862 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Scanning]  port []
+2014-10-10 11:12:36,862 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-10-10 11:12:36,862 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-10-10 11:12:36,867 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:36,867 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:36,868 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-10-10 11:12:36,868 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-10-10 11:12:36,878 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:36,878 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:36,879 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): device not found
+2014-10-10 11:12:36,879 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: HIDDeviceNotFoundException while trying to connect to the Finch, returning null
+edu.cmu.ri.createlab.usb.hid.HIDDeviceNotFoundException: Device with vendor ID [2354] and product ID [1111] not found.
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connect(WindowsHIDDevice.java:321)
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connectExclusively(WindowsHIDDevice.java:281)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController.create(DefaultFinchController.java:64)
+	at edu.cmu.ri.createlab.device.connectivity.FinchConnectivityManager.scanForDeviceAndCreateProxy(FinchConnectivityManager.java:14)
+	at edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager$DeviceScanner.run(BaseCreateLabDeviceConnectivityManager.java:229)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2014-10-10 11:12:36,880 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection failed
+2014-10-10 11:12:36,880 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: Failed to connect, but we're still in scan mode, so schedule a new scan
+2014-10-10 11:12:37,882 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-10-10 11:12:37,882 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Scanning]  port []
+2014-10-10 11:12:37,882 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-10-10 11:12:37,882 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-10-10 11:12:37,886 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:37,887 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:37,888 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-10-10 11:12:37,888 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-10-10 11:12:37,890 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:37,890 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:37,891 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): device not found
+2014-10-10 11:12:37,891 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: HIDDeviceNotFoundException while trying to connect to the Finch, returning null
+edu.cmu.ri.createlab.usb.hid.HIDDeviceNotFoundException: Device with vendor ID [2354] and product ID [1111] not found.
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connect(WindowsHIDDevice.java:321)
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connectExclusively(WindowsHIDDevice.java:281)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController.create(DefaultFinchController.java:64)
+	at edu.cmu.ri.createlab.device.connectivity.FinchConnectivityManager.scanForDeviceAndCreateProxy(FinchConnectivityManager.java:14)
+	at edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager$DeviceScanner.run(BaseCreateLabDeviceConnectivityManager.java:229)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2014-10-10 11:12:37,891 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection failed
+2014-10-10 11:12:37,892 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: Failed to connect, but we're still in scan mode, so schedule a new scan
+2014-10-10 11:12:38,894 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-10-10 11:12:38,894 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Scanning]  port []
+2014-10-10 11:12:38,894 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-10-10 11:12:38,894 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-10-10 11:12:38,898 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:38,898 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:38,899 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-10-10 11:12:38,900 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-10-10 11:12:38,901 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:38,901 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:38,902 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): device not found
+2014-10-10 11:12:38,902 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: HIDDeviceNotFoundException while trying to connect to the Finch, returning null
+edu.cmu.ri.createlab.usb.hid.HIDDeviceNotFoundException: Device with vendor ID [2354] and product ID [1111] not found.
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connect(WindowsHIDDevice.java:321)
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connectExclusively(WindowsHIDDevice.java:281)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController.create(DefaultFinchController.java:64)
+	at edu.cmu.ri.createlab.device.connectivity.FinchConnectivityManager.scanForDeviceAndCreateProxy(FinchConnectivityManager.java:14)
+	at edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager$DeviceScanner.run(BaseCreateLabDeviceConnectivityManager.java:229)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2014-10-10 11:12:38,903 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection failed
+2014-10-10 11:12:38,903 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: Failed to connect, but we're still in scan mode, so schedule a new scan
+2014-10-10 11:12:39,904 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-10-10 11:12:39,904 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Scanning]  port []
+2014-10-10 11:12:39,904 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-10-10 11:12:39,904 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-10-10 11:12:39,908 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:39,908 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:39,909 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-10-10 11:12:39,910 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-10-10 11:12:39,911 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:39,911 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:39,912 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): device not found
+2014-10-10 11:12:39,912 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: HIDDeviceNotFoundException while trying to connect to the Finch, returning null
+edu.cmu.ri.createlab.usb.hid.HIDDeviceNotFoundException: Device with vendor ID [2354] and product ID [1111] not found.
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connect(WindowsHIDDevice.java:321)
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connectExclusively(WindowsHIDDevice.java:281)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController.create(DefaultFinchController.java:64)
+	at edu.cmu.ri.createlab.device.connectivity.FinchConnectivityManager.scanForDeviceAndCreateProxy(FinchConnectivityManager.java:14)
+	at edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager$DeviceScanner.run(BaseCreateLabDeviceConnectivityManager.java:229)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2014-10-10 11:12:39,913 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection failed
+2014-10-10 11:12:39,913 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: Failed to connect, but we're still in scan mode, so schedule a new scan
+2014-10-10 11:12:40,913 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-10-10 11:12:40,913 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Scanning]  port []
+2014-10-10 11:12:40,913 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-10-10 11:12:40,913 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-10-10 11:12:40,928 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:40,929 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:40,930 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-10-10 11:12:40,930 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-10-10 11:12:40,943 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:40,943 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:40,944 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): device not found
+2014-10-10 11:12:40,944 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: HIDDeviceNotFoundException while trying to connect to the Finch, returning null
+edu.cmu.ri.createlab.usb.hid.HIDDeviceNotFoundException: Device with vendor ID [2354] and product ID [1111] not found.
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connect(WindowsHIDDevice.java:321)
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connectExclusively(WindowsHIDDevice.java:281)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController.create(DefaultFinchController.java:64)
+	at edu.cmu.ri.createlab.device.connectivity.FinchConnectivityManager.scanForDeviceAndCreateProxy(FinchConnectivityManager.java:14)
+	at edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager$DeviceScanner.run(BaseCreateLabDeviceConnectivityManager.java:229)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2014-10-10 11:12:40,945 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection failed
+2014-10-10 11:12:40,945 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: Failed to connect, but we're still in scan mode, so schedule a new scan
+2014-10-10 11:12:41,946 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-10-10 11:12:41,946 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Scanning]  port []
+2014-10-10 11:12:41,946 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-10-10 11:12:41,946 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-10-10 11:12:41,949 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:41,950 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:41,951 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-10-10 11:12:41,951 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-10-10 11:12:41,952 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:41,952 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:41,953 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): device not found
+2014-10-10 11:12:41,953 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: HIDDeviceNotFoundException while trying to connect to the Finch, returning null
+edu.cmu.ri.createlab.usb.hid.HIDDeviceNotFoundException: Device with vendor ID [2354] and product ID [1111] not found.
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connect(WindowsHIDDevice.java:321)
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connectExclusively(WindowsHIDDevice.java:281)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController.create(DefaultFinchController.java:64)
+	at edu.cmu.ri.createlab.device.connectivity.FinchConnectivityManager.scanForDeviceAndCreateProxy(FinchConnectivityManager.java:14)
+	at edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager$DeviceScanner.run(BaseCreateLabDeviceConnectivityManager.java:229)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2014-10-10 11:12:41,954 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection failed
+2014-10-10 11:12:41,954 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: Failed to connect, but we're still in scan mode, so schedule a new scan
+2014-10-10 11:12:42,956 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-10-10 11:12:42,956 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Scanning]  port []
+2014-10-10 11:12:42,956 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-10-10 11:12:42,956 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-10-10 11:12:42,983 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:42,983 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:42,984 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-10-10 11:12:42,984 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-10-10 11:12:42,986 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:42,986 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:42,987 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): device not found
+2014-10-10 11:12:42,987 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: HIDDeviceNotFoundException while trying to connect to the Finch, returning null
+edu.cmu.ri.createlab.usb.hid.HIDDeviceNotFoundException: Device with vendor ID [2354] and product ID [1111] not found.
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connect(WindowsHIDDevice.java:321)
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connectExclusively(WindowsHIDDevice.java:281)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController.create(DefaultFinchController.java:64)
+	at edu.cmu.ri.createlab.device.connectivity.FinchConnectivityManager.scanForDeviceAndCreateProxy(FinchConnectivityManager.java:14)
+	at edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager$DeviceScanner.run(BaseCreateLabDeviceConnectivityManager.java:229)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2014-10-10 11:12:42,988 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection failed
+2014-10-10 11:12:42,988 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: Failed to connect, but we're still in scan mode, so schedule a new scan
+2014-10-10 11:12:43,989 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-10-10 11:12:43,996 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Scanning]  port []
+2014-10-10 11:12:43,996 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-10-10 11:12:43,996 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-10-10 11:12:43,999 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:43,999 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:44,000 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-10-10 11:12:44,001 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-10-10 11:12:44,002 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-10-10 11:12:44,002 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-10-10 11:12:44,002 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): device not found
+2014-10-10 11:12:44,003 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: HIDDeviceNotFoundException while trying to connect to the Finch, returning null
+edu.cmu.ri.createlab.usb.hid.HIDDeviceNotFoundException: Device with vendor ID [2354] and product ID [1111] not found.
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connect(WindowsHIDDevice.java:321)
+	at edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice.connectExclusively(WindowsHIDDevice.java:281)
+	at edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController.create(DefaultFinchController.java:64)
+	at edu.cmu.ri.createlab.device.connectivity.FinchConnectivityManager.scanForDeviceAndCreateProxy(FinchConnectivityManager.java:14)
+	at edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager$DeviceScanner.run(BaseCreateLabDeviceConnectivityManager.java:229)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2014-10-10 11:12:44,003 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection failed
+2014-10-10 11:12:44,003 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: Failed to connect, but we're still in scan mode, so schedule a new scan
+2014-12-12 10:14:30,495 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication()
+2014-12-12 10:14:30,498 [main] INFO : edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): System property [terk-application.connection-strategy.class.name] is not defined.  Attempting to use default [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy] implementation class instead.
+2014-12-12 10:14:30,535 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): successfully instantiated ConnectionStrategy implementation class [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy]
+2014-12-12 10:14:31,627 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager: scanAndConnectWorkhorseRunnable.run()
+2014-12-12 10:14:31,628 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager.disconnect()
+2014-12-12 10:14:31,628 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Disconnected]  port []
+2014-12-12 10:14:31,630 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-12-12 10:14:31,630 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Scanning]  port []
+2014-12-12 10:14:31,648 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-12-12 10:14:31,671 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-12-12 10:14:32,805 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:14:32,806 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:14:32,808 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-12-12 10:14:32,808 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-12-12 10:14:32,874 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:14:32,874 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:14:32,937 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:14:32,941 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): connection successful
+2014-12-12 10:14:32,988 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection established!
+2014-12-12 10:14:32,990 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Connected]  port [\\?\hid#vid_2354&pid_1111#6&391fe76d&1&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+2014-12-12 10:14:33,016 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::motor::OpenLoopVelocityControllableMotorService] service
+2014-12-12 10:14:33,016 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::motor::OpenLoopVelocityControllableMotorService)
+2014-12-12 10:14:33,026 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,2)
+2014-12-12 10:14:33,026 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::min-velocity,-255)
+2014-12-12 10:14:33,026 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::max-velocity,255)
+2014-12-12 10:15:05,770 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication()
+2014-12-12 10:15:05,772 [main] INFO : edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): System property [terk-application.connection-strategy.class.name] is not defined.  Attempting to use default [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy] implementation class instead.
+2014-12-12 10:15:05,809 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): successfully instantiated ConnectionStrategy implementation class [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy]
+2014-12-12 10:15:06,149 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager: scanAndConnectWorkhorseRunnable.run()
+2014-12-12 10:15:06,150 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager.disconnect()
+2014-12-12 10:15:06,150 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Disconnected]  port []
+2014-12-12 10:15:06,152 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-12-12 10:15:06,153 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Scanning]  port []
+2014-12-12 10:15:06,170 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-12-12 10:15:06,192 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-12-12 10:15:07,129 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:15:07,129 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:15:07,131 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-12-12 10:15:07,132 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-12-12 10:15:07,197 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:15:07,197 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:15:07,261 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:15:07,264 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): connection successful
+2014-12-12 10:15:07,308 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection established!
+2014-12-12 10:15:07,309 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Connected]  port [\\?\hid#vid_2354&pid_1111#6&391fe76d&1&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+2014-12-12 10:15:07,332 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::motor::OpenLoopVelocityControllableMotorService] service
+2014-12-12 10:15:07,333 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::motor::OpenLoopVelocityControllableMotorService)
+2014-12-12 10:15:07,341 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,2)
+2014-12-12 10:15:07,342 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::min-velocity,-255)
+2014-12-12 10:15:07,342 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::max-velocity,255)
+2014-12-12 10:15:39,136 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication()
+2014-12-12 10:15:39,139 [main] INFO : edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): System property [terk-application.connection-strategy.class.name] is not defined.  Attempting to use default [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy] implementation class instead.
+2014-12-12 10:15:39,172 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): successfully instantiated ConnectionStrategy implementation class [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy]
+2014-12-12 10:15:39,494 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager: scanAndConnectWorkhorseRunnable.run()
+2014-12-12 10:15:39,494 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager.disconnect()
+2014-12-12 10:15:39,494 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Disconnected]  port []
+2014-12-12 10:15:39,496 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-12-12 10:15:39,497 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Scanning]  port []
+2014-12-12 10:15:39,512 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-12-12 10:15:39,563 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-12-12 10:15:40,590 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:15:40,590 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:15:40,592 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-12-12 10:15:40,593 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-12-12 10:15:40,657 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:15:40,657 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:15:40,721 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:15:40,724 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): connection successful
+2014-12-12 10:15:40,769 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection established!
+2014-12-12 10:15:40,771 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Connected]  port [\\?\hid#vid_2354&pid_1111#6&391fe76d&1&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+2014-12-12 10:15:40,794 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::motor::OpenLoopVelocityControllableMotorService] service
+2014-12-12 10:15:40,794 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::motor::OpenLoopVelocityControllableMotorService)
+2014-12-12 10:15:40,804 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,2)
+2014-12-12 10:15:40,804 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::min-velocity,-255)
+2014-12-12 10:15:40,804 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::max-velocity,255)
+2014-12-12 10:16:12,262 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication()
+2014-12-12 10:16:12,264 [main] INFO : edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): System property [terk-application.connection-strategy.class.name] is not defined.  Attempting to use default [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy] implementation class instead.
+2014-12-12 10:16:12,298 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): successfully instantiated ConnectionStrategy implementation class [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy]
+2014-12-12 10:16:12,613 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager: scanAndConnectWorkhorseRunnable.run()
+2014-12-12 10:16:12,613 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager.disconnect()
+2014-12-12 10:16:12,614 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Disconnected]  port []
+2014-12-12 10:16:12,616 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-12-12 10:16:12,616 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Scanning]  port []
+2014-12-12 10:16:12,632 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-12-12 10:16:12,653 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-12-12 10:16:13,582 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:16:13,583 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:16:13,584 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-12-12 10:16:13,585 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-12-12 10:16:13,651 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:16:13,652 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:16:13,715 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:16:13,718 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): connection successful
+2014-12-12 10:16:13,769 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection established!
+2014-12-12 10:16:13,771 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Connected]  port [\\?\hid#vid_2354&pid_1111#6&391fe76d&1&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+2014-12-12 10:16:13,793 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::motor::OpenLoopVelocityControllableMotorService] service
+2014-12-12 10:16:13,794 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::motor::OpenLoopVelocityControllableMotorService)
+2014-12-12 10:16:13,803 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,2)
+2014-12-12 10:16:13,804 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::min-velocity,-255)
+2014-12-12 10:16:13,804 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::max-velocity,255)
+2014-12-12 10:16:23,823 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::led::FullColorLEDService] service
+2014-12-12 10:16:23,823 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::led::FullColorLEDService)
+2014-12-12 10:16:23,837 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,1)
+2014-12-12 10:16:23,837 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::led::FullColorLEDService::min-intensity,0)
+2014-12-12 10:16:23,838 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::led::FullColorLEDService::max-intensity,255)
+2014-12-12 10:17:01,573 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication()
+2014-12-12 10:17:01,575 [main] INFO : edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): System property [terk-application.connection-strategy.class.name] is not defined.  Attempting to use default [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy] implementation class instead.
+2014-12-12 10:17:01,613 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): successfully instantiated ConnectionStrategy implementation class [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy]
+2014-12-12 10:17:01,946 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager: scanAndConnectWorkhorseRunnable.run()
+2014-12-12 10:17:01,946 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager.disconnect()
+2014-12-12 10:17:01,947 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Disconnected]  port []
+2014-12-12 10:17:01,949 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-12-12 10:17:01,949 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Scanning]  port []
+2014-12-12 10:17:01,965 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-12-12 10:17:01,989 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-12-12 10:17:02,953 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:17:02,954 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:17:02,956 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-12-12 10:17:02,956 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-12-12 10:17:03,022 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:17:03,022 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:17:03,086 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:17:03,090 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): connection successful
+2014-12-12 10:17:03,137 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection established!
+2014-12-12 10:17:03,139 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Connected]  port [\\?\hid#vid_2354&pid_1111#6&391fe76d&1&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+2014-12-12 10:17:03,165 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::motor::OpenLoopVelocityControllableMotorService] service
+2014-12-12 10:17:03,165 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::motor::OpenLoopVelocityControllableMotorService)
+2014-12-12 10:17:03,174 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,2)
+2014-12-12 10:17:03,174 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::min-velocity,-255)
+2014-12-12 10:17:03,175 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::max-velocity,255)
+2014-12-12 10:17:22,316 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication()
+2014-12-12 10:17:22,318 [main] INFO : edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): System property [terk-application.connection-strategy.class.name] is not defined.  Attempting to use default [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy] implementation class instead.
+2014-12-12 10:17:22,352 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): successfully instantiated ConnectionStrategy implementation class [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy]
+2014-12-12 10:17:22,660 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager: scanAndConnectWorkhorseRunnable.run()
+2014-12-12 10:17:22,660 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager.disconnect()
+2014-12-12 10:17:22,661 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Disconnected]  port []
+2014-12-12 10:17:22,663 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-12-12 10:17:22,663 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Scanning]  port []
+2014-12-12 10:17:22,679 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-12-12 10:17:22,701 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-12-12 10:17:23,651 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:17:23,652 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:17:23,655 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-12-12 10:17:23,655 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-12-12 10:17:23,721 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:17:23,721 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:17:23,784 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:17:23,788 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): connection successful
+2014-12-12 10:17:23,832 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection established!
+2014-12-12 10:17:23,834 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Connected]  port [\\?\hid#vid_2354&pid_1111#6&391fe76d&1&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+2014-12-12 10:17:23,850 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::motor::OpenLoopVelocityControllableMotorService] service
+2014-12-12 10:17:23,851 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::motor::OpenLoopVelocityControllableMotorService)
+2014-12-12 10:17:23,860 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,2)
+2014-12-12 10:17:23,860 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::min-velocity,-255)
+2014-12-12 10:17:23,860 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::max-velocity,255)
+2014-12-12 10:17:42,891 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication()
+2014-12-12 10:17:42,893 [main] INFO : edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): System property [terk-application.connection-strategy.class.name] is not defined.  Attempting to use default [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy] implementation class instead.
+2014-12-12 10:17:42,927 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): successfully instantiated ConnectionStrategy implementation class [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy]
+2014-12-12 10:17:43,243 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager: scanAndConnectWorkhorseRunnable.run()
+2014-12-12 10:17:43,243 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager.disconnect()
+2014-12-12 10:17:43,244 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Disconnected]  port []
+2014-12-12 10:17:43,246 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-12-12 10:17:43,246 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Scanning]  port []
+2014-12-12 10:17:43,262 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-12-12 10:17:43,283 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-12-12 10:17:44,265 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:17:44,265 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:17:44,267 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-12-12 10:17:44,268 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-12-12 10:17:44,334 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:17:44,334 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:17:44,398 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:17:44,402 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): connection successful
+2014-12-12 10:17:44,450 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection established!
+2014-12-12 10:17:44,451 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Connected]  port [\\?\hid#vid_2354&pid_1111#6&391fe76d&1&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+2014-12-12 10:17:44,467 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::motor::OpenLoopVelocityControllableMotorService] service
+2014-12-12 10:17:44,467 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::motor::OpenLoopVelocityControllableMotorService)
+2014-12-12 10:17:44,477 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,2)
+2014-12-12 10:17:44,477 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::min-velocity,-255)
+2014-12-12 10:17:44,477 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::max-velocity,255)
+2014-12-12 10:17:54,495 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::led::FullColorLEDService] service
+2014-12-12 10:17:54,495 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::led::FullColorLEDService)
+2014-12-12 10:17:54,509 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,1)
+2014-12-12 10:17:54,509 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::led::FullColorLEDService::min-intensity,0)
+2014-12-12 10:17:54,509 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::led::FullColorLEDService::max-intensity,255)
+2014-12-12 10:18:06,636 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication()
+2014-12-12 10:18:06,639 [main] INFO : edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): System property [terk-application.connection-strategy.class.name] is not defined.  Attempting to use default [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy] implementation class instead.
+2014-12-12 10:18:06,672 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): successfully instantiated ConnectionStrategy implementation class [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy]
+2014-12-12 10:18:06,980 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager: scanAndConnectWorkhorseRunnable.run()
+2014-12-12 10:18:06,981 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager.disconnect()
+2014-12-12 10:18:06,981 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Disconnected]  port []
+2014-12-12 10:18:06,983 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-12-12 10:18:06,983 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Scanning]  port []
+2014-12-12 10:18:06,999 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-12-12 10:18:07,020 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-12-12 10:18:07,947 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:18:07,948 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:18:07,949 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-12-12 10:18:07,950 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-12-12 10:18:08,016 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:18:08,016 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:18:08,079 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:18:08,084 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): connection successful
+2014-12-12 10:18:08,129 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection established!
+2014-12-12 10:18:08,131 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Connected]  port [\\?\hid#vid_2354&pid_1111#6&391fe76d&1&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+2014-12-12 10:18:08,154 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::motor::OpenLoopVelocityControllableMotorService] service
+2014-12-12 10:18:08,155 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::motor::OpenLoopVelocityControllableMotorService)
+2014-12-12 10:18:08,163 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,2)
+2014-12-12 10:18:08,164 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::min-velocity,-255)
+2014-12-12 10:18:08,164 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::max-velocity,255)
+2014-12-12 10:18:18,183 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::led::FullColorLEDService] service
+2014-12-12 10:18:18,183 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::led::FullColorLEDService)
+2014-12-12 10:18:18,190 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,1)
+2014-12-12 10:18:18,190 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::led::FullColorLEDService::min-intensity,0)
+2014-12-12 10:18:18,190 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::led::FullColorLEDService::max-intensity,255)
+2014-12-12 10:24:14,777 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication()
+2014-12-12 10:24:14,779 [main] INFO : edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): System property [terk-application.connection-strategy.class.name] is not defined.  Attempting to use default [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy] implementation class instead.
+2014-12-12 10:24:14,813 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): successfully instantiated ConnectionStrategy implementation class [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy]
+2014-12-12 10:24:15,125 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager: scanAndConnectWorkhorseRunnable.run()
+2014-12-12 10:24:15,125 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager.disconnect()
+2014-12-12 10:24:15,125 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Disconnected]  port []
+2014-12-12 10:24:15,127 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-12-12 10:24:15,128 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Scanning]  port []
+2014-12-12 10:24:15,144 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-12-12 10:24:15,165 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-12-12 10:24:16,207 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:24:16,207 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:24:16,209 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-12-12 10:24:16,209 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-12-12 10:24:16,275 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:24:16,275 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:24:16,339 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:24:16,343 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): connection successful
+2014-12-12 10:24:16,392 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection established!
+2014-12-12 10:24:16,393 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Connected]  port [\\?\hid#vid_2354&pid_1111#6&391fe76d&1&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+2014-12-12 10:24:16,410 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::motor::OpenLoopVelocityControllableMotorService] service
+2014-12-12 10:24:16,410 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::motor::OpenLoopVelocityControllableMotorService)
+2014-12-12 10:24:16,419 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,2)
+2014-12-12 10:24:16,420 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::min-velocity,-255)
+2014-12-12 10:24:16,420 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::max-velocity,255)
+2014-12-12 10:24:26,437 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::led::FullColorLEDService] service
+2014-12-12 10:24:26,437 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::led::FullColorLEDService)
+2014-12-12 10:24:26,452 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,1)
+2014-12-12 10:24:26,452 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::led::FullColorLEDService::min-intensity,0)
+2014-12-12 10:24:26,452 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::led::FullColorLEDService::max-intensity,255)
+2014-12-12 10:24:36,998 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication()
+2014-12-12 10:24:37,000 [main] INFO : edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): System property [terk-application.connection-strategy.class.name] is not defined.  Attempting to use default [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy] implementation class instead.
+2014-12-12 10:24:37,036 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): successfully instantiated ConnectionStrategy implementation class [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy]
+2014-12-12 10:24:37,357 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager: scanAndConnectWorkhorseRunnable.run()
+2014-12-12 10:24:37,357 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager.disconnect()
+2014-12-12 10:24:37,358 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Disconnected]  port []
+2014-12-12 10:24:37,360 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-12-12 10:24:37,360 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Scanning]  port []
+2014-12-12 10:24:37,376 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-12-12 10:24:37,397 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-12-12 10:24:38,338 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:24:38,338 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:24:38,340 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-12-12 10:24:38,340 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-12-12 10:24:38,406 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:24:38,407 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:24:38,469 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:24:38,474 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): connection successful
+2014-12-12 10:24:38,519 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection established!
+2014-12-12 10:24:38,521 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Connected]  port [\\?\hid#vid_2354&pid_1111#6&391fe76d&1&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+2014-12-12 10:24:38,544 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::motor::OpenLoopVelocityControllableMotorService] service
+2014-12-12 10:24:38,544 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::motor::OpenLoopVelocityControllableMotorService)
+2014-12-12 10:24:38,553 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,2)
+2014-12-12 10:24:38,554 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::min-velocity,-255)
+2014-12-12 10:24:38,554 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::max-velocity,255)
+2014-12-12 10:24:48,573 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::led::FullColorLEDService] service
+2014-12-12 10:24:48,574 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::led::FullColorLEDService)
+2014-12-12 10:24:48,587 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,1)
+2014-12-12 10:24:48,587 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::led::FullColorLEDService::min-intensity,0)
+2014-12-12 10:24:48,587 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::led::FullColorLEDService::max-intensity,255)
+2014-12-12 10:25:14,602 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication()
+2014-12-12 10:25:14,604 [main] INFO : edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): System property [terk-application.connection-strategy.class.name] is not defined.  Attempting to use default [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy] implementation class instead.
+2014-12-12 10:25:14,639 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): successfully instantiated ConnectionStrategy implementation class [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy]
+2014-12-12 10:25:14,973 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager: scanAndConnectWorkhorseRunnable.run()
+2014-12-12 10:25:14,973 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager.disconnect()
+2014-12-12 10:25:14,973 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Disconnected]  port []
+2014-12-12 10:25:14,975 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-12-12 10:25:14,976 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Scanning]  port []
+2014-12-12 10:25:14,992 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-12-12 10:25:15,015 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-12-12 10:25:15,956 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:25:15,957 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:25:15,959 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-12-12 10:25:15,959 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-12-12 10:25:16,024 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:25:16,024 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:25:16,088 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:25:16,091 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): connection successful
+2014-12-12 10:25:16,135 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection established!
+2014-12-12 10:25:16,137 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Connected]  port [\\?\hid#vid_2354&pid_1111#6&391fe76d&1&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+2014-12-12 10:25:16,154 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::motor::OpenLoopVelocityControllableMotorService] service
+2014-12-12 10:25:16,154 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::motor::OpenLoopVelocityControllableMotorService)
+2014-12-12 10:25:16,163 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,2)
+2014-12-12 10:25:16,163 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::min-velocity,-255)
+2014-12-12 10:25:16,163 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::max-velocity,255)
+2014-12-12 10:25:26,181 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::led::FullColorLEDService] service
+2014-12-12 10:25:26,181 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::led::FullColorLEDService)
+2014-12-12 10:25:26,189 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,1)
+2014-12-12 10:25:26,190 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::led::FullColorLEDService::min-intensity,0)
+2014-12-12 10:25:26,190 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::led::FullColorLEDService::max-intensity,255)
+2014-12-12 10:25:36,532 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication()
+2014-12-12 10:25:36,534 [main] INFO : edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): System property [terk-application.connection-strategy.class.name] is not defined.  Attempting to use default [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy] implementation class instead.
+2014-12-12 10:25:36,571 [main] DEBUG: edu.cmu.ri.createlab.terk.application.TerkApplication: TerkApplication.TerkApplication(): successfully instantiated ConnectionStrategy implementation class [edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy]
+2014-12-12 10:25:36,890 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager: scanAndConnectWorkhorseRunnable.run()
+2014-12-12 10:25:36,919 [main] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: BaseCreateLabDeviceConnectivityManager.disconnect()
+2014-12-12 10:25:36,920 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Disconnected]  port []
+2014-12-12 10:25:36,922 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run()
+2014-12-12 10:25:36,923 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Disconnected]  NEW [Scanning]  port []
+2014-12-12 10:25:36,939 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): creating HID device for vendor ID [2354] and product ID [1111]
+2014-12-12 10:25:36,960 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.DefaultFinchController: DefaultFinchController.create(): attempting connection...
+2014-12-12 10:25:37,909 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:25:37,910 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:25:37,911 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): CreateFile failed (WinError{id=32, name='Sharing Violation: the process cannot access the file because it is being used by another process'}), skipping this device
+2014-12-12 10:25:37,912 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): Failed to disconnect.  Return was [false] and last error was [WinError{id=6, name='Invalid Handle: the handle is invalid'}]
+2014-12-12 10:25:37,977 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] ERROR: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.readDeviceInfo(): Failed to read device attributes
+2014-12-12 10:25:37,978 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:25:38,041 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.disconnect(): disconnected successfully
+2014-12-12 10:25:38,045 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.usb.hid.windows.WindowsHIDDevice: WindowsHIDDevice.connect(): connection successful
+2014-12-12 10:25:38,090 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.device.connectivity.BaseCreateLabDeviceConnectivityManager: CreateLabDeviceConnectivityManagerImpl$DeviceScanner.run(): connection established!
+2014-12-12 10:25:38,091 [BaseCreateLabDeviceConnectivityManager.executorService pool-1-thread-1] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.LocalFinchConnectionStrategy: LocalFinchConnectionStrategy.handleConnectionStateChange(): OLD [Scanning]  NEW [Connected]  port [\\?\hid#vid_2354&pid_1111#6&391fe76d&1&0000#{4d1e55b2-f16f-11cf-88cb-001111000030}]
+2014-12-12 10:25:38,115 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceManager: FinchServiceManager.loadService() needs to load the [::TeRK::motor::OpenLoopVelocityControllableMotorService] service
+2014-12-12 10:25:38,116 [main] DEBUG: edu.cmu.ri.createlab.terk.robot.finch.services.FinchServiceFactory: FinchServiceFactory.createService(::TeRK::motor::OpenLoopVelocityControllableMotorService)
+2014-12-12 10:25:38,125 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(device.count,2)
+2014-12-12 10:25:38,125 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::min-velocity,-255)
+2014-12-12 10:25:38,125 [main] DEBUG: edu.cmu.ri.createlab.terk.properties.BasicPropertyManager: ServantPropertyManager.setReadOnlyProperty(::TeRK::motor::OpenLoopVelocityControllableMotorService::max-velocity,255)
